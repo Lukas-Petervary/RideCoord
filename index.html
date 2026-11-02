@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ride link for the sober driver</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ride link for the sober driver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <div class="band" aria-hidden="true"></div>
 <main>
-  <h1>Ride link for the sober driver</h1>
-  <p class="lede">Enter your number to get a QR code. Riders scan it, say where they’re headed, and a text to you is ready to send.</p>
+    <h1>Ride link for the sober driver</h1>
+    <p class="lede">Enter your number to get a QR code. Riders scan it, say where they’re headed, and a text to you is
+        ready to send.</p>
 
-  <form id="f" novalidate>
-    <label for="name">Your name <span class="opt">(optional)</span></label>
-    <input id="name" autocomplete="given-name" maxlength="30" placeholder="Mike">
+    <form id="f" novalidate>
+        <label for="name">Your name <span class="opt">(optional)</span></label>
+        <input id="name" autocomplete="given-name" maxlength="30" placeholder="Mike">
 
-    <label for="phone">Your phone number</label>
-    <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="518 555 1234" required aria-describedby="hint">
-    <p class="hint" id="hint">US numbers need 10 digits. Elsewhere, start with the country code.</p>
+        <label for="phone">Your phone number</label>
+        <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="518 555 1234" required
+               aria-describedby="hint">
+        <p class="hint" id="hint">US numbers need 10 digits. Elsewhere, start with the country code.</p>
 
-    <p class="err" id="err" role="alert" hidden></p>
-    <button class="cta" type="submit">Create QR code</button>
-  </form>
+        <p class="err" id="err" role="alert" hidden></p>
+        <button class="cta" type="submit">Create QR code</button>
+    </form>
 
-  <section id="out" hidden aria-live="polite">
-    <h2>Your ride link</h2>
-    <p class="hint" id="outSub"></p>
-    <div class="qr" id="qr"></div>
+    <section id="out" hidden aria-live="polite">
+        <h2>Your ride link</h2>
+        <p class="hint" id="outSub"></p>
+        <div class="qr" id="qr"></div>
 
-    <label for="link">Link</label>
-    <input id="link" readonly>
-    <div class="row">
-      <button class="btn" id="copy" type="button">Copy link</button>
-      <button class="btn" id="dl" type="button">Download QR</button>
-      <a class="btn" id="preview" target="_blank" rel="noopener">Preview rider page</a>
-    </div>
-  </section>
+        <label for="link">Link</label>
+        <input id="link" readonly>
+        <div class="row">
+            <button class="btn" id="copy" type="button">Copy link</button>
+            <button class="btn" id="dl" type="button">Download QR</button>
+            <a class="btn" id="preview" target="_blank" rel="noopener">Preview rider page</a>
+        </div>
+    </section>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>

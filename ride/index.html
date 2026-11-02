@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Request a ride</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request a ride</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Figtree:wght@400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div class="band" aria-hidden="true"></div>
 <main>
-  <section id="bad" hidden>
-    <h1>This link is missing a driver</h1>
-    <p class="lede">Ask your driver to show their QR code again, or to make a new one.</p>
-  </section>
-
-  <section id="good" hidden>
-    <h1>Need a ride?</h1>
-    <p class="lede lede--rider" id="lede"></p>
-
-    <form id="f" novalidate>
-      <label for="phone">Your phone number</label>
-      <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="518 555 0000" required>
-
-      <label for="dest">Where to?</label>
-      <input id="dest" autocomplete="off" maxlength="120" placeholder="Address or place" required>
-
-      <label for="count">How many people?</label>
-      <div class="step">
-        <button type="button" id="minus" aria-label="One fewer person">−</button>
-        <input id="count" type="number" inputmode="numeric" min="1" max="8" value="1">
-        <button type="button" id="plus" aria-label="One more person">+</button>
-      </div>
-
-      <p class="err" id="err" role="alert" hidden></p>
-      <button class="cta" type="submit">Request ride</button>
-    </form>
-
-    <section id="sent" hidden aria-live="polite">
-      <h2>Your text is ready</h2>
-      <p class="fine" id="sentSub"></p>
-      <p class="msg" id="msgText"></p>
-      <div class="row">
-        <a class="btn" id="again">Open text again</a>
-        <button class="btn" id="copy" type="button">Copy message</button>
-      </div>
+    <section id="bad" hidden>
+        <h1>This link is missing a driver</h1>
+        <p class="lede">Ask your driver to show their QR code again, or to make a new one.</p>
     </section>
-  </section>
+
+    <section id="good" hidden>
+        <h1>Need a ride?</h1>
+        <p class="lede lede--rider" id="lede"></p>
+
+        <form id="f" novalidate>
+            <label for="phone">Your phone number</label>
+            <input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="518 555 0000" required>
+
+            <label for="dest">Where to?</label>
+            <input id="dest" autocomplete="off" maxlength="120" placeholder="Address or place" required>
+
+            <label for="count">How many people?</label>
+            <div class="step">
+                <button type="button" id="minus" aria-label="One fewer person">−</button>
+                <input id="count" type="number" inputmode="numeric" min="1" max="8" value="1">
+                <button type="button" id="plus" aria-label="One more person">+</button>
+            </div>
+
+            <p class="err" id="err" role="alert" hidden></p>
+            <button class="cta" type="submit">Request ride</button>
+        </form>
+
+        <section id="sent" hidden aria-live="polite">
+            <h2>Your text is ready</h2>
+            <p class="fine" id="sentSub"></p>
+            <p class="msg" id="msgText"></p>
+            <div class="row">
+                <a class="btn" id="again">Open text again</a>
+                <button class="btn" id="copy" type="button">Copy message</button>
+            </div>
+        </section>
+    </section>
 </main>
 
 <script src="../js/common.js"></script>
